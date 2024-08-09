@@ -1,0 +1,15 @@
+
+{% extends "tasks/layout.html" %}    <!-- concept of template inheritance -->
+
+{% block body %}
+        <h1>Add Task</h1>
+        <form action="{% url 'tasks:add' %}" method="post">    <!-- this send back info to the add url file -->
+            {% csrf_token %}
+            
+            {{ form }}      <!-- Django will generate the necessary html to make the form work!-->
+ <!--       <input type="text" name="task">      #ALTERNATIVE ROW TO THE ONE ABOVE -->
+           
+            <input type="submit">
+        </form>
+        <a href="{% url 'tasks:index' %}">View Tasks</a>   <!-- Django functionality not to hard code path to html files!-->
+{% endblock %}

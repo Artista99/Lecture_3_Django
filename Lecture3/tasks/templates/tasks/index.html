@@ -1,0 +1,15 @@
+
+{% extends "tasks/layout.html" %}    <!-- concept of template inheritance -->
+
+{% block body %}
+    <h1>Tasks</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {% empty%}    <!-- what should be displayed if the list is empty -->
+            <li>No tasks</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'tasks:add' %}">Add a New Task</a>   <!-- Django functionality not to hard code path to html files!-->
+{% endblock %}
+    

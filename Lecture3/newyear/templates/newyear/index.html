@@ -1,0 +1,17 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Is it New Year's?</title>
+        <link href="{% static 'newyear/styles.css' %}" rel="stylesheet">   <!-- it is a static file inside the folder newyear....; Django will figure out what the url is! i.e. where the static files are located -->
+    </head>
+    <body>
+        {% if newyear %}   <!-- newyear is the name of the variable that we passed to this template -->
+            <h1 style="color: blue">YES</h1>
+        {% else %}
+            <h1 style="color: red">NO</h1>
+        {% endif %}
+    </body>
+</html>

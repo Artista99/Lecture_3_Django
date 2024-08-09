@@ -1,0 +1,12 @@
+<!-- basic layout file all the other files will inherit from -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tasks</title>
+    </head>
+    <body>
+        {% block body %}    <!-- indicates to django what will change in the child html files; the name of the block is "body" note: can use any other name -->
+        {% endblock %}
+    </body>
+</html>
